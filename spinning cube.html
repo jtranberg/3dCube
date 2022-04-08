@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/6bf476e595.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+<title>cube</title>
+</head>
+<body>
+    
+
+<!-- JJ -->
+<div class="page">
+    <div class="container">
+      <div class="shadow-wrapper">
+        <div class="shadow">
+          <div>&nbsp;</div>
+        </div>
+      </div>
+      <div class="box-wrapper">
+        <div class="box-faces">
+          <div class="box-face box-face--is-front">
+            <p>
+                <i class="fa-solid fa-ankh fa-6x"></i>
+            </p>
+          </div>
+          <div class="box-face box-face--is-back">
+            <p>
+                <i class="fa-solid fa-ankh fa-6x"></i>
+            </p>
+          </div>
+          <div class="box-face box-face--is-top">&nbsp;</div>
+          <div class="box-face box-face--is-bottom">&nbsp;</div>
+          <div class="box-face box-face--is-left">
+            <p>
+                <i class="fa-solid fa-ankh fa-6x"></i>
+            </p>
+          </div>
+          <div class="box-face box-face--is-right">
+            <p>
+                <i class="fa-solid fa-ankh fa-6x"></i>
+            </p>
+          </div>
+  
+        </div><!-- end of .box -->
+      </div><!-- end of .box-wrapper -->
+    </div><!-- /.container -->
+  </div><!-- /.page -->
+  <!-- SDG -->
+
+  <style>
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #d4bebe;
+  }
+  .page {
+    color: #222;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+  }
+  .container {
+    margin-top: -200px;
+  }
+  
+  .box-wrapper {
+    perspective: 800px;
+    perspective-origin: 50% 100px;
+    
+  }
+  
+  .box-faces {
+    position: relative;
+    width: 200px;
+    transform-style: preserve-3d;
+    
+  }
+  .box-faces p {
+    padding: 40px 0;
+  }
+  .box-face {
+    outline: 1px solid #999;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.98;
+    box-shadow: inset 0px 0px 100px #555;
+  }
+  
+  .box-face--is-back {
+    transform: translateZ(-100px) rotateY(180deg);
+    background-color: #ec7171;
+  }
+  .box-face--is-right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+    background-color: rgb(230, 119, 119);
+  }
+  .box-face--is-left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+    background-color: rgb(219, 115, 115);
+  }
+  .box-face--is-top {
+    transform: rotateX(-90deg) translateY(-100px);
+    transform-origin: top center;
+    background-color: #dfa0a0;
+  }
+  .box-face--is-bottom {
+    transform: rotateX(90deg) translateY(100px);
+    transform-origin: bottom center;
+    background-color: rgb(231, 109, 109);
+  }
+  .box-face--is-front {
+    transform: translateZ(100px);
+    background-color: rgb(235, 115, 115);
+  }
+  
+  
+  @keyframes spin {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+  }
+  
+  .box-faces, .shadow {
+    animation: spin 10s infinite linear;
+  }
+  
+  
+  .fa-solid {color: aqua;}
+  .shadow-wrapper {
+    perspective: 800px;
+    perspective-origin: 50% 100px;
+  /*  -webkit-perspective: 800px;
+    -webkit-perspective-origin: 50% 100px;*/
+  }
+  
+  .shadow {
+    position: relative;
+    width: 200px;
+    transform-style: preserve-3d;
+  }
+  
+  .shadow div{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    opacity: 0.98;
+    box-shadow: 0px 0px 100px #000;
+    transform: rotateX(90deg) translateY(100px);
+    transform-origin: bottom center;
+  }
+  </style>
+  </body>
+</html>
