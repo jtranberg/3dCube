@@ -21,24 +21,24 @@
         <div class="box-faces">
           <div class="box-face box-face--is-front">
             <p>
-                <i class="fa-solid fa-ankh fa-6x"></i>
+                <i class="fa-solid fa-ankh "></i>
             </p>
           </div>
           <div class="box-face box-face--is-back">
             <p>
-                <i class="fa-solid fa-ankh fa-6x"></i>
+                <i class="fa-solid fa-ankh "></i>
             </p>
           </div>
           <div class="box-face box-face--is-top">&nbsp;</div>
           <div class="box-face box-face--is-bottom">&nbsp;</div>
           <div class="box-face box-face--is-left">
             <p>
-                <i class="fa-solid fa-ankh fa-6x"></i>
+                <i class="fa-solid fa-ankh "></i>
             </p>
           </div>
           <div class="box-face box-face--is-right">
             <p>
-                <i class="fa-solid fa-ankh fa-6x"></i>
+                <i class="fa-solid fa-ankh "></i>
             </p>
           </div>
   
@@ -92,6 +92,7 @@ body{
     height: 200px;
     opacity: 0.98;
     box-shadow: inset 0px 0px 100px #555;
+    transform-style: preserve-3d;
   }
   
   .box-face--is-back {
@@ -134,7 +135,17 @@ body{
   }
   
   
-  .fa-solid {color: aqua;}
+  .fa-solid  {
+    position: flex;
+    justify-content: center;
+    
+    font-size: 120px;
+    color: aqua;
+    
+    
+
+  }
+
   .shadow-wrapper {
     perspective: 800px;
     perspective-origin: 50% 100px;
